@@ -2,8 +2,7 @@
 #define _MAIN_H_
 
 #include <stdarg.h>
-#include <stdio.h>
-#include <unistd.h>
+
 
 /**
  * struct fmt_fct - Structure to map format with appropriate function
