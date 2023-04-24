@@ -5,7 +5,7 @@
  * Return: 1
  */
 
-int print_pct()
+int print_pct(void)
 {
 	_putchar(37);
 	return (1);

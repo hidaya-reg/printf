@@ -6,13 +6,13 @@
  */
 int _printf(const char *format, ...)
 {
-	fmt_t fmt[] = {
+	fmt_t t[] = {
 		{"%s", print_str},
 		{"%c", print_char},
 		{"%%", print_pct}
 	};
 	va_list args;
-	int i, j, nbr_char = 0, len_str = 1;
+	int i = 0, j, nbr_char = 0, len_str = 1;
 
 	if (format == NULL)
 		return (-1);
@@ -24,9 +24,9 @@ Here:
 		j = 2;
 		while (j >= 0)
 		{
-			if (fmt[j].fmt[0] == format[i] && fmt[j].fmt[1] == format[i + 1])
+			if (t[j].fmt[0] == format[i] && t[j].fmt[1] == format[i + 1])
 			{
-				len_str = fmt[j].fct(args);
+				len_str = t[j].fct(args);
 				i = i + 2;
 				goto Here;
 			}
