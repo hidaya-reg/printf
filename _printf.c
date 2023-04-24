@@ -10,7 +10,6 @@ int _printf(const char *format, ...)
 		{"%s", print_str},
 		{"%c", print_char},
 		{"%%", print_pct},
-		{NULL, NULL}
 	};
 	va_list args;
 	int i = 0, j, nbr_char = 0;
@@ -23,7 +22,7 @@ int _printf(const char *format, ...)
 Here:
 	while (format[i] != '\0')
 	{
-		j = 3;
+		j = 2;
 		while (j >= 0)
 		{
 			if (t[j].fmt[0] == format[i] && t[j].fmt[1] == format[i + 1])
