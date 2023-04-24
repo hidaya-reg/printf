@@ -9,10 +9,11 @@ int _printf(const char *format, ...)
 	fmt_t t[] = {
 		{"%s", print_str},
 		{"%c", print_char},
-		{"%%", print_pct}
+		{"%%", print_pct},
+		{NULL, NULL}
 	};
 	va_list args;
-	int i = 0, j, nbr_char = 0, len_str = 1;
+	int i = 0, j, nbr_char = 0;
 
 	if (format == NULL)
 		return (-1);
@@ -21,12 +22,12 @@ int _printf(const char *format, ...)
 Here:
 	while (format[i] != '\0')
 	{
-		j = 2;
+		j = 3;
 		while (j >= 0)
 		{
 			if (t[j].fmt[0] == format[i] && t[j].fmt[1] == format[i + 1])
 			{
-				len_str = t[j].fct(args);
+				nbr_char += t[j].fct(args);
 				i = i + 2;
 				goto Here;
 			}
@@ -34,9 +35,8 @@ Here:
 		}
 		_putchar(format[i]);
 		i++;
-		nbr_char = nbr_char + len_str;
+		nbr_char++;
 	}
-	nbr_char = (nbr_char + i) / 2;
 	va_end(args);
 	return (nbr_char);
 }
