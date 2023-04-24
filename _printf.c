@@ -18,19 +18,23 @@ int _printf(const char *format, ...)
 		return (-1);
 
 	va_start(args, format);
-
-	for (i = 0; format[i] != '\0'; i += 2)
+Here:
+	While (format[i] != '\0')
 	{
 		j = 2;
 		while (j >= 0)
 		{
-			if (fmt_t[j].fmt[0] == format[i] && fmt_t[j].fmt[1] == format[i + 1])
+			if (fmt[j].fmt[0] == format[i] && fmt[j].fmt[1] == format[i + 1])
 			{
 				len_str = fmt[j].fct(args);
+				i = i + 2;
+				goto Here;
 			}
 			j--;
 		}
-		nbr_char += len_str;
+		_putchar(format[i]);
+		i++;
+		nbr_char = nbr_char + len_str;
 	}
 	nbr_char = (nbr_char + i) / 2;
 	va_end(args);
