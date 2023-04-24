@@ -4,7 +4,7 @@
  * @format: desired format
  * Return: number of characters printed
  */
-int _printf(const char * const format, ...)
+int _printf(const char *format, ...)
 {
 	fmt_t fmt[] = {
 		{"%s", print_str},
