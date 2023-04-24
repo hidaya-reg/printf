@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 Here:
-	While (format[i] != '\0')
+	while (format[i] != '\0')
 	{
 		j = 2;
 		while (j >= 0)

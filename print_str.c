@@ -10,7 +10,7 @@ int _strlen(char *s)
 {
 	int len;
 
-	for (c = 0; s[len] != 0; len++)
+	for (len = 0; s[len] != 0; len++)
 		;
 	return (len);
 }
@@ -28,7 +28,7 @@ int print_str(va_list args)
 
 	s = va_arg(args, char *);
 	if (s == NULL)
-		s = '(nil)';
+		s = "(null)";
 	len = _strlen(s);
 	for (i = 0; i < len; i++)
 		_putchar(s[i]);
