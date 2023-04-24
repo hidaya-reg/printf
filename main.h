@@ -15,7 +15,7 @@
 struct fmt_fct
 {
 	char fmt;
-	int (*fct)(va_list, char[], int, int, int, int);
+	int (*fct)(va_list);
 };
 
 /**
