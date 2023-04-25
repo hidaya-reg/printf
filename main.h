@@ -13,8 +13,8 @@
  */
 typedef struct fmt_fct
 {
-	char *fmt;
-	int (*fct)();
+        char *fmt;
+        int (*fct)();
 } fmt_t;
 
 int _putchar(char c);
@@ -22,8 +22,8 @@ int _printf(const char *format, ...);
 int print_str(va_list args);
 int print_char(va_list args);
 int print_pct(void);
-int print_int(int n);
-int print_bin(unsigned int n);
+int print_dec(va_list args);
+int print_int(va_list args);
 
 
 #endif
