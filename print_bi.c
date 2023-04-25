@@ -4,9 +4,9 @@
  *@n:number decimal
  *Return: times of number print
  */
-int print_bi(va_list int n)
+int print_bi(unsigned int n)
 {
-	va_list int a, b, c, d, f;
+	unsigned int a, b, c, d, f;
 	int count = 0;
 
 	b = n;
