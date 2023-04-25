@@ -36,7 +36,7 @@ int print_dec(va_list args)
 	{
 		if (power == 1)
 		{
-			_putchar(abs_num % 10 +'0');
+			_putchar(abs_num % 10 + '0');
 			test_power = 0;
 		}
 		else
