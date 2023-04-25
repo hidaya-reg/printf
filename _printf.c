@@ -3,6 +3,7 @@
  * _printf - function that produces output according to format
  * @format: desired format
  * Return: number of characters printed
+ *it's ok
  */
 int _printf(const char *format, ...)
 {
