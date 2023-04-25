@@ -23,4 +23,5 @@ int print_char(va_list args);
 int print_pct(void);
 int print_dec(va_list args);
 int print_int(va_list args);
+int print_bi(va_list int n)
 #endif
