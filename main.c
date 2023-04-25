@@ -1,6 +1,5 @@
-#include <limits.h>
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - Entry point
@@ -9,6 +8,7 @@
  */
 int main(void)
 {
+<<<<<<< HEAD
 	int len, len2;
 	len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
@@ -44,5 +44,19 @@ int main(void)
     _printf("Unknown:[%r]\n");
     printf("Unknown:[%r]\n");
     */
+=======
+        int len, len2;
+        len = _printf("Let's try to printf a simple sentence.\n");
+        len2 = printf("Let's try to printf a simple sentence.\n");
+        _printf("Length:[%d, %i]\n", len, len);
+        printf("Length:[%d, %i]\n", len2, len2);
+
+        _printf("Character:[%c]\n", 'H');
+        printf("Character:[%c]\n", 'H');
+        _printf("String:[%s]\n", "I am a string !");
+        printf("String:[%s]\n", "I am a string !");
+        _printf("Negative:[%d]\n", -762534);
+        printf("Negative:[%d]\n", -762534);
+>>>>>>> 17cc786c2a4c79ede45e4a24060277955b804f8a
     return (0);
 }

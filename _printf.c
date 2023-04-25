@@ -13,12 +13,12 @@ int _printf(const char *format, ...)
 		{"%d", print_dec},
 		{"%i", print_int}
 	};
-	va_list args;
-	int i = 0, j, nbr_char = 0;
+        va_list args;
+        int i = 0, j, nbr_char = 1;
 
-	va_start(args, format);
-	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
-		return (-1);
+        va_start(args, format);
+        if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+                return (-1);
 
 
 Here:
