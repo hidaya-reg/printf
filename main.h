@@ -23,6 +23,5 @@ int print_char(va_list args);
 int print_pct(void);
 int print_dec(va_list args);
 int print_int(va_list args);
-int print_bi(unsigned int n);
-int rot13(char *s);
+int printf_bin(va_list val);
 #endif
