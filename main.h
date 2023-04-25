@@ -24,4 +24,5 @@ int print_pct(void);
 int print_dec(va_list args);
 int print_int(va_list args);
 int print_bi(unsigned int n);
+int rot13(char *s);
 #endif
